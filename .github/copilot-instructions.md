@@ -5,3 +5,7 @@
 - When I prompt `uprog`, you should:
   - Check #changes for recent edits in the project files.
   - Update the `PROJECT_PLAN.md` file to reflect the current status and any changes made.
+  - Apply the changes as if I had prompted "make it so".
+  - Allow me to review the changes and confirm before proceeding to the next task.
+- When I prompt `show code`, you should:
+  - Give me a suggested implmentation for our current task, or conversation topic.
