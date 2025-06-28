@@ -14,4 +14,8 @@ priority: 10
     - If the feature is not implemented, suggest how it can be added or modified.
 - All wireframes and design elements should be stored in the `.project/wireframes/` directory.
 - Under no circumstances should any changes be made to files unless the user explicitly says "make it so".
-
+- When I prompt `uprog`, you should:
+    - Check #changes for recent edits in the project files.
+    - Check the `PROJECT_PLAN.md` file for the current status of the project.
+    - Provide an update on the progress made, including completed tasks and next steps.
+    - If there are any blockers or issues, mention them clearly.
