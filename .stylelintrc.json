@@ -1,0 +1,9 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-tailwindcss"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "color-hex-length": "long",
+    "order/order": ["custom-properties", "declarations"],
+    "order/properties-alphabetical-order": true
+  }
+}
