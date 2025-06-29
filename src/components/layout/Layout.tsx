@@ -1,5 +1,9 @@
 import React from 'react';
 
+import { Footer } from './Footer';
+import { Header } from './Header';
+import { SkipToContent } from './SkipToContent';
+
 /**
  * Usage example:
  *
@@ -14,16 +18,17 @@ import React from 'react';
 
 interface LayoutProps {
   children: React.ReactNode;
-  header?: React.ReactNode;
-  footer?: React.ReactNode;
 }
 
-export function Layout({ children, header, footer }: LayoutProps) {
+export function Layout({ children }: LayoutProps) {
   return (
     <div className="bg-background text-foreground flex min-h-screen flex-col">
-      {header}
-      <div className="flex flex-1 flex-col">{children}</div>
-      {footer}
+      <SkipToContent />
+      <Header />
+      <main id="main-content" className="flex-1 min-h-[60vh]">
+        {children}
+      </main>
+      <Footer />
     </div>
   );
 }

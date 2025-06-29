@@ -1,5 +1,6 @@
-import React from 'react';
 import clsx from 'clsx';
+import { AppWindowMac, ChevronRight, X as CloseIcon, Menu } from 'lucide-react';
+import React from 'react';
 
 /**
  * Usage examples:
@@ -24,36 +25,48 @@ import clsx from 'clsx';
  * </button>
  */
 
+const nameMap = {
+  close: CloseIcon,
+  menu: Menu,
+  window: AppWindowMac,
+  chevronRight: ChevronRight,
+};
+
 interface IconProps extends React.HTMLAttributes<HTMLElement> {
-  children: React.ReactNode;
+  children?: React.ReactNode;
+  name?: keyof typeof nameMap;
   size?: 'sm' | 'md' | 'lg';
   as?: React.ElementType;
 }
 
 const sizeMap = {
-  sm: 'h-4 w-4',
-  md: 'h-6 w-6',
-  lg: 'h-8 w-8',
+  sm: 16,
+  md: 24,
+  lg: 32,
 };
 
 export function Icon({
   children,
+  name,
   size = 'md',
   className,
   as = 'span',
   ...props
 }: IconProps) {
   const Comp = as;
+  const LucideIcon = name ? nameMap[name] : null;
   return (
     <Comp
-      className={clsx(
-        'inline-flex items-center justify-center',
-        sizeMap[size],
-        className,
-      )}
+      className={clsx('inline-flex items-center justify-center', className)}
       {...props}
     >
-      {children}
+      {LucideIcon ? (
+        <LucideIcon color="currentcolor" size={sizeMap[size]} />
+      ) : (
+        children
+      )}
     </Comp>
   );
 }
+
+Icon.nameMap = nameMap;

@@ -1,6 +1,6 @@
-import { cva, type VariantProps } from 'class-variance-authority';
-import React from 'react';
+import { type VariantProps, cva } from 'class-variance-authority';
 import clsx from 'clsx';
+import React from 'react';
 
 /**
  * Usage examples:
@@ -39,6 +39,7 @@ const buttonVariants = cva(
         destructive: 'bg-red-600 text-white hover:bg-red-700',
       },
       size: {
+        icon: 'h-8 w-8 p-0',
         sm: 'h-8 px-3 text-sm',
         md: 'h-10 px-4 text-base',
         lg: 'h-12 px-6 text-lg',
