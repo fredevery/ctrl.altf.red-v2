@@ -91,12 +91,14 @@ This document outlines the complete step-by-step implementation plan for the ctr
 
 ### Utility Functions
 
-- [ ] Create date formatting utilities
-- [ ] Build slug generation function
-- [ ] Create reading time calculator
-- [ ] Build tag/category utilities
-- [ ] Create image path helpers
-- [ ] Implement SEO meta tag generators
+- [x] Create date formatting utilities
+- [x] Build slug generation function
+- [x] Create reading time calculator
+- [x] Build tag/category utilities
+- [x] Create image path helpers
+- [x] Implement SEO meta tag generators
+- [x] Move all utility functions to "lib/utils" directory
+- [x] Move all hooks to "lib/hooks" directory
 
 ### Global Layout Components
 
