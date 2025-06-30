@@ -29,6 +29,7 @@ export const projectSchema = z.object({
   demo: z.string().url().optional(),
   image: z.string().optional(),
   featured: z.boolean().optional(),
+  images: z.array(z.string()).optional(), // <-- add this line
 });
 
 /**
