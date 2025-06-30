@@ -1,0 +1,16 @@
+# Resume Placeholder
+
+This file should be replaced with your actual resume PDF.
+
+## Requirements:
+- **Filename**: `resume.pdf`
+- **Format**: PDF
+- **Size**: Under 5MB
+- **Content**: Your professional resume
+- **Accessibility**: Searchable text (not just an image)
+
+## Usage:
+This PDF is linked from the homepage CTA section with a download button.
+
+## Security:
+Ensure the PDF doesn't contain sensitive information you don't want publicly accessible.
