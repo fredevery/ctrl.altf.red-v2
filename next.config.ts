@@ -1,11 +1,9 @@
-import type { NextConfig } from 'next';
+import { initOpenNextCloudflareForDev } from '@opennextjs/cloudflare';
+initOpenNextCloudflareForDev();
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   compiler: {},
+  transpilePackages: ['next-mdx-remote']
 };
 
 export default nextConfig;
-
-// added by create cloudflare to enable calling `getCloudflareContext()` in `next dev`
-import { initOpenNextCloudflareForDev } from '@opennextjs/cloudflare';
-initOpenNextCloudflareForDev();

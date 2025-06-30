@@ -145,14 +145,16 @@ This document outlines the complete step-by-step implementation plan for the ctr
 
 ### Blog System
 
-- [ ] Create blog listing page
-- [ ] Build blog post card component
-- [ ] Implement blog post pagination
-- [ ] Create individual blog post layout
-- [ ] Add markdown rendering with syntax highlighting
-- [ ] Implement tag-based filtering
-- [ ] Create tag listing page
-- [ ] Build related posts component
+- [x] Create blog listing page
+- [x] Build blog post card component
+- [x] Implement blog post pagination
+- [x] Create individual blog post layout
+- [x] Add markdown rendering with syntax highlighting
+- [x] Implement tag-based filtering
+- [x] Create tag listing page
+- [x] Build related posts component
+
+> **Note:** See the new "Content Handling Review" section for a planned audit and improvements to markdown/MDX content handling.
 
 ### Contact Page
 
@@ -385,3 +387,14 @@ This document outlines the complete step-by-step implementation plan for the ctr
 - Document any deviations or additional tasks discovered
 - Keep track of dependencies between tasks
 - Regular commits after completing logical groups of tasks
+
+## 📝 Content Handling Review
+
+### Markdown & MDX System Audit
+
+- [ ] Review current approach for loading and serializing markdown/MDX files
+- [ ] Evaluate error handling and validation for frontmatter and content
+- [ ] Assess support for advanced MDX features (custom components, remark/rehype plugins)
+- [ ] Ensure consistent handling of both markdown and MDX content types
+- [ ] Document content pipeline and update developer docs
+- [ ] Plan improvements for maintainability, extensibility, and performance

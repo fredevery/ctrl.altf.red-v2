@@ -1,5 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
+
 import { parseMarkdownFile } from './parseMarkdown';
 import { blogPostSchema } from './schemas';
 
@@ -18,6 +19,7 @@ export async function getAllBlogPosts() {
         const { data, content } = await parseMarkdownFile(
           filePath,
           blogPostSchema,
+          { as: 'raw' },
         );
         const slug = file.replace(/\.(md|mdx)$/, '');
         return { data, content, slug, filePath };

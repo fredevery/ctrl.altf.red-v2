@@ -35,3 +35,12 @@ export function filterByTag<T extends { tags: string[] }>(
 ): T[] {
   return items.filter((item) => item.tags.includes(tag));
 }
+
+// Deprecated: Use extractUniqueTags instead for generic tag extraction
+// export function getAllTags(posts: BlogPost[]): string[] {
+//   const tagSet = new Set<string>();
+//   posts.forEach((post) => {
+//     post.tags?.forEach((tag) => tagSet.add(tag));
+//   });
+//   return Array.from(tagSet).sort();
+// }
